@@ -37,7 +37,7 @@ FEATURES = [
      "label": "ECOS", "desc": "코스피·코스닥·환율 일별 추이"},
     {"key": "음원툴박스", "title": "음원툴박스", "icon": "headphones", "group": "개인 관심사",
      "label": "AUDIO", "desc": "유튜브 MP3 추출, 텍스트 음성 변환",
-     "note": "유튜브 정책에 따라 MP3 추출이 안 될 수 있음"},
+     "note": "유튜브 정책에 따라 MP3 추출은 로컬 실행시에만 작동"},
     {"key": "아파트실거래가조회", "title": "아파트실거래가조회", "icon": "apartment", "group": "개인 관심사",
      "label": "REAL ESTATE", "desc": "지역·기간별 아파트 매매 실거래가"},
 ]
@@ -139,21 +139,21 @@ h1, h2, h3 { letter-spacing: -0.02em; }
 .mf-section-sub { font-size: 0.85rem; color: var(--mf-text-3); }
 .mf-count { margin-left: auto; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 9999px; background: var(--mf-yellow-100); color: var(--mf-primary-700); }
 .mf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
-.mf-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--mf-border); border-radius: var(--mf-radius-lg); background: #FFFFFF;
+.mf-card { display: grid; grid-template-rows: 2fr 3fr; overflow: hidden; border: 1px solid var(--mf-border); border-radius: var(--mf-radius-lg); background: #FFFFFF;
   box-shadow: var(--mf-shadow-sm); text-decoration: none !important; color: inherit !important;
   transition: transform 150ms var(--mf-ease-out), box-shadow 150ms var(--mf-ease-out); }
 .mf-card:hover { transform: translateY(-3px); box-shadow: var(--mf-shadow-md); }
-.mf-cover { position: relative; overflow: hidden; height: 108px; padding: 16px 18px; display: flex; flex-direction: column; justify-content: flex-end; color: #FFFFFF; }
+.mf-cover { position: relative; overflow: hidden; min-height: 72px; padding: 12px 18px; display: flex; flex-direction: column; justify-content: flex-end; color: #FFFFFF; }
 .mf-cover::before { content: ''; position: absolute; width: 110px; height: 110px; top: -35px; right: -20px; border: 20px solid rgba(255,255,255,.14); border-radius: 50%; }
 .mf-cover::after { content: ''; position: absolute; width: 65px; height: 65px; left: -15px; bottom: -24px; border-radius: 20px; background: rgba(255,255,255,.10); transform: rotate(28deg); }
 .mf-cover small { position: relative; z-index: 1; font-size: 10px; font-weight: 800; letter-spacing: .1em; opacity: .75; }
-.mf-cover .mf-ic { position: relative; z-index: 1; font-size: 28px; margin-top: 4px; }
-.mf-meta { padding: 14px 16px 16px; display: flex; align-items: center; gap: 10px; flex: 1; }
+.mf-cover .mf-ic { position: relative; z-index: 1; font-size: 24px; margin-top: 3px; }
+.mf-meta { padding: 14px 16px 16px; display: flex; align-items: flex-start; gap: 10px; min-height: 108px; }
 .mf-meta-body { min-width: 0; }
 .mf-meta h3 { margin: 0 !important; padding: 0 !important; font-size: 15px !important; font-weight: 700 !important; color: var(--mf-text-1) !important; letter-spacing: -0.02em; }
 .mf-meta p { margin: 3px 0 0 !important; font-size: 12px; color: var(--mf-text-3); line-height: 1.45; }
 .mf-meta .mf-note { color: var(--mf-warning-fg); font-size: 11px; }
-.mf-arrow { margin-left: auto; width: 30px; height: 30px; flex: none; border-radius: 50%; border: 1px solid var(--mf-border); display: grid; place-items: center; color: var(--mf-primary-500); }
+.mf-arrow { align-self: center; margin-left: auto; width: 30px; height: 30px; flex: none; border-radius: 50%; border: 1px solid var(--mf-border); display: grid; place-items: center; color: var(--mf-primary-500); }
 .mf-arrow .mf-ic { font-size: 18px; }
 
 @media (max-width: 760px) {
@@ -214,7 +214,7 @@ def hero():
     html = (
         '<div class="mf-hero">'
         '<div class="mf-hero-copy">'
-        '<span class="mf-eyebrow">ONE APP, MANY TOOLS</span>'
+        '<span class="mf-eyebrow">ONE APP, MULTI TOOLS</span>'
         '<div class="mf-hero-title" role="heading" aria-level="1">흩어진 업무 도구를<br>한 곳에서 가볍게</div>'
         '<p class="mf-hero-lead">데이터 정리부터 공시·주가 조회, 문서 변환까지. '
         "필요한 기능을 골라 바로 쓰는 모듈형 Multi-Function 웹앱입니다.</p>"
