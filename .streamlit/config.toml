@@ -1,0 +1,22 @@
+[theme]
+base = "light"
+primaryColor = "#5C3824"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F7F5F2"
+textColor = "#241C18"
+linkColor = "#5C3824"
+borderColor = "#E7E2DD"
+dataframeHeaderBackgroundColor = "#F7F5F2"
+showWidgetBorder = true
+baseRadius = "0.875rem"
+buttonRadius = "full"
+font = "Pretendard:https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css, sans-serif"
+chartCategoricalColors = ["#5C3824", "#E0A400", "#356C8C", "#B84235", "#237A43"]
+redColor = "#B84235"
+redBackgroundColor = "#FCE9E6"
+greenColor = "#237A43"
+greenBackgroundColor = "#EAF6EE"
+blueColor = "#356C8C"
+blueBackgroundColor = "#EAF2F7"
+yellowColor = "#9A6200"
+yellowBackgroundColor = "#FFF4D6"
